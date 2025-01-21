@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="media.css"/>
+
+
+</head>
+<body>
+    <nav id="dekstop-nav">
+        <div class="logo">Navya Sahni</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contactme">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="navy-nav">
+        <div class="logo">Navya Sahni</div>
+    <div class="navy-menu">
+        <div class="navy-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+                <!-- <li><a href="#introduction" onclick="toggleMenu()">Introduction</a></li> -->
+                <li><a href="#introduction" id="introductionLink">Introduction</a></li>
+                <!-- <li><a href="#about" onclick="toggleMenu()">About Me</a></li> -->
+                <li><a href="#about" id="aboutLink">About Me</a></li>
+                <li><a href="#projects" id="projectsLink">Projects</a></li>
+                <!-- <li><a href="#projects" onclick="toggleMenu()">Projects</a></li> -->
+                <li><a href="#contactme" id="contactmeLink">Contact Me</a></li>
+                <!-- <li><a href="#contactme" onclick="toggleMenu()">Contact Me</a></li> -->
+        </div>
+    </div>
+    </nav>
+    
+   
+ 
+    <div class="container">
+            <img src="material/Untitled_design-removebg.png" alt="Image" class="move-image">
+            <section id="introduction">
+            <div class="text">
+                <p class="he">Hi, I am </p>
+                <h1>Navya Sahni</h1>
+                <span></span>
+                
+                <p class="he">I am a  <div id="word"></div></p>
+                
+                <script>
+                    
+                    const words = ["Web Developer", "Programmer", "Web Designer", "Networking Enthusiast", "Cyber Security Enthusiast"];
+                    const wordElement = document.getElementById("word");
+                    let currentIndex = 0;
+            
+                    function changeWord() {
+                        wordElement.textContent = words[currentIndex];
+                        currentIndex = (currentIndex + 1) % words.length; // Loop back to the first word
+                        setTimeout(changeWord, 1000); // Change every 1 second
+                    }
+            
+                    changeWord();
+                </script>
+                <p class="he">I am passionate in IoT, AI, cybersecurity, web development, data analysis and graphic design. I am a developer and a programmer who loves to learn new technologies. I am also a district-level badminton player and a national level painter .</p>
+         
+    
+           
+                <button class="custom-button"><a href="material/BTBTC22084_NAVYA SAHNI (3).pdf" >Download My Resume</a></button>
+                
+            </div>
+            </section>
+
+            <script>
+                document.getElementById('introductionLink').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    document.querySelector('#introduction').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            </script>
+       
+            
+            <section id="about">
+                
+                <h1 class="title">About Me</h1>
+                <p class="title" >My skills are as follows</p>
+                
+           </section>
+
+              <div class="timeline">
+                <!-- Step 1 -->
+                <div class="timeline-step">
+                  <div class="timeline-content left">
+                    <h3>Designer by Heart, Developer by Passion</h3>
+                    <p>Started as a creative soul, exploring graphic design with Canva and mastering the art of intuitive interfaces</p>
+                  </div>
+                  <div class="timeline-circle"></div>
+                </div>
+          
+                <!-- Step 2 -->
+                <div class="timeline-step">
+                  <div class="timeline-circle"></div>
+                  <div class="timeline-content right">
+                    <h3>Exploring Computer Science</h3>
+                    <p>I started learning programming languages like C, C++,Java and Python, blending logic with creativity.</p>
+                  </div>
+                </div>
+            
+                <!-- Step 3 -->
+                <div class="timeline-step">
+                  <div class="timeline-content left">
+                    <h3>The Language of the Web</h3>
+                    <p>Brought ideas to life with HTML, CSS, and JavaScript, crafting responsive designs that speak for themselves.Brought ideas to life with HTML, CSS, and JavaScript, crafting responsive designs that speak for themselves.</p>
+                  </div>
+                  <div class="timeline-circle"></div>
+                </div>
+              </div>
+             </div>
+             
+            
+            
+            <script>
+                document.getElementById('aboutLink').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    document.querySelector('#about').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            </script>
+
+              <div class="certifications-section">
+                <h2>Certifications</h2>
+                <div class="certifications-container">
+                    <!-- Certification 1 -->
+                    <div class="certificate" onclick="showPDF('material/Intoduction to IoT.pdf')">
+                        <p>Certificate in IoT By Cisco Networking Academy</p>
+                    </div>
+                    <!-- Certification 2 -->
+                    <div class="certificate" onclick="showPDF('material/Introduction to Cybersecurity.pdf')">
+                        <p>Certificate in Cyber Security  By Cisco Networking Academy</p>
+                    </div>
+                    <!-- Certification 3 -->
+                    <div class="certificate" onclick="showPDF('material/Introduction To Data Science.pdf')">
+                        <p>Certificate in Data Science By Cisco Networking Academy</p>
+                    </div>
+
+                    <div class="certificate" onclick="showPDF('material/1731176388132.pdf')">
+                        <p>CCNA : Introduction To Networks</p>
+                    </div>
+                    <div class="certificate" onclick="showPDF('material/1731176464773.pdf')">
+                        <p>CCNA: Switching, Routing, and Wireless Essentials</p>
+                    </div>
+                    <div class="certificate" onclick="showPDF('material/1732089939819.pdf')">
+                        <p>CCNA: Enterprise Networking, Security, and Automation</p>
+                    </div>
+                    <div class="certificate" onclick="showPDF('material/C++.pdf')">
+                        <p>C++ certfication by CodeChef</p>
+                    </div>
+                    <div class="certificate" onclick="showPDF('material/g.pdf')">
+                        <p>German Language Certificate</p>
+                    </div>
+                </div>
+            
+        
+                <!-- Inline PDF Viewer Section -->
+                <div id="pdf-viewer" class="pdf-viewer">
+                    <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+                </div>
+              </div>
+            
+        
+            <script>
+                // Function to display the PDF in the viewer
+                function showPDF(pdfUrl) {
+                    const pdfFrame = document.getElementById('pdf-frame');
+                    const pdfViewer = document.getElementById('pdf-viewer');
+        
+                    pdfFrame.src = pdfUrl; // Set the source of the iframe
+                    pdfViewer.style.display = 'block'; // Make the viewer visible
+                }
+            </script>
+
+<section class="skills-section">
+    <h1>I have experience with these technologies</h1>
+    <div class="skills-container">
+        <div class="skill"><img src="material/images (4).png" alt="C"><p>C</p></div>
+        <div class="skill"><img src="material/c-.png" alt="C++"><p>C++</p></div>
+        <div class="skill"><img src="material/java.png" alt="Java"><p>Java</p></div>
+        <div class="skill"><img src="material/html-5.png" alt="HTML"><p>HTML</p></div>
+        <div class="skill"><img src="material/919826.png" alt="CSS"><p>CSS</p></div>
+        <div class="skill"><img src="material/images (3).png" alt="JavaScript"><p>JavaScript</p></div>
+        <div class="skill"><img src="material/images (2).png" alt="Tailwind CSS"><p>Tailwind CSS</p></div>
+        <div class="skill"><img src="material/github.png" alt="GitHub"><p>GitHub</p></div>
+        <div class="skill"><img src="material/c.jpeg" alt="Canva"><p>Canva</p></div>
+        <div class="skill"><img src="material/Mysql_logo.png" alt="MySQL"><p>MySQL</p></div>
+        
+    </div>
+</section>
+
+
+
+           
+
+<section id="contactme" class="contact-section">
+    <h2>Contact Me</h2>
+    <p>I'm always open to networking and new opportunities!</p>
+
+    <div class="contact-info">
+        <div class="contact-item">
+            <img src="material/download (1).png" alt="Gmail Icon" class="icon">
+            <a href="mailto:sahninavya08@gmail.com">sahninavya08@gmail.com</a>
+        </div>
+        <div class="contact-item">
+            <img src="material/download.png" alt="LinkedIn Icon" class="icon">
+            <a href="https://www.linkedin.com/in/navya-sahni-04573b24b" target="_blank">LinkedIn Profile</a>
+        </div>
+        <div class="contact-item">
+            <img src="material/whatsapp.png" alt="WhatsApp Icon" class="icon">
+            <a href="tel:+91 8076574310">+91 8076574310</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactmeLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#contactme').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+
+    <p class="cta-message">Let’s get in touch!</p>
+</section>         
+
+              
+    </section>
+    <script src="script.jss"></script>
+
+</body>
+</html>
